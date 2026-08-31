@@ -18,8 +18,8 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_e
     coordinator = hass.data[DOMAIN][entry.entry_id]
     async_add_entities([
         BeachDaySensor(coordinator, entry, "score", "Beach Day Score", None),
-        BeachDaySensor(coordinator, entry, "water_temperature", "Water Temperature", UnitOfTemperature.CELSIUS),
-        BeachDaySensor(coordinator, entry, "air_temperature", "Air Temperature", UnitOfTemperature.CELSIUS),
+        BeachDaySensor(coordinator, entry, "water_temperature", "Water Temperature", UnitOfTemperature.FAHRENHEIT),
+        BeachDaySensor(coordinator, entry, "air_temperature", "Air Temperature", UnitOfTemperature.FAHRENHEIT),
     ])
 
 
@@ -55,8 +55,8 @@ class BeachDaySensor(CoordinatorEntity, SensorEntity):
         if self._key == "score":
             return data.get("beach_day_score")
         if self._key == "water_temperature":
-            return _nested_number(data, "water_temperature", "temperature_c", "temp_c")
-        return _nested_number(data, "air_temperature", "temperature", "temperature_c", "temp_c")
+            return _nested_number(data, "water_temperature", "water_temp_f", "temperature_f", "temp_f")
+        return _nested_number(data, "air_temperature", "temperature_f", "temp_f")
 
     @property
     def extra_state_attributes(self):
