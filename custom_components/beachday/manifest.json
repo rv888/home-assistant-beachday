@@ -1,0 +1,11 @@
+{
+  "domain": "beachday",
+  "name": "Beach Day API",
+  "codeowners": ["@rv888"],
+  "config_flow": true,
+  "documentation": "https://github.com/rv888/home-assistant-beachday",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/rv888/home-assistant-beachday/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

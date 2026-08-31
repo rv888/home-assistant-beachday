@@ -1,0 +1,21 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Beach Day API",
+        "description": "Enter your Beach Day API key and the numeric ID of the beach to monitor.",
+        "data": {
+          "api_key": "API key",
+          "beach_id": "Beach ID"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect or validate the Beach Day API credentials.",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "This beach is already configured."
+    }
+  }
+}
