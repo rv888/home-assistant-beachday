@@ -24,3 +24,5 @@ The integration lives in `custom_components/beachday`. Run the Python tests with
 ## Support
 
 Open an issue at https://github.com/rv888/home-assistant-beachday/issues.
+
+Validation metadata confirmed for HACS catalog review.
